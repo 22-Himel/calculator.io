@@ -9,7 +9,7 @@ const btn6 = document.getElementById("btn6");
 const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
-const btn10 = document.getElementById("btn10"); 
+const btn10 = document.getElementById("btn10"); // Zero button
 const clear = document.getElementById("clear");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
@@ -18,6 +18,9 @@ const division = document.getElementById("division");
 const modules = document.getElementById("modules");
 const ans = document.getElementById("ans");
 const del = document.getElementById("del");
+const decimal = document.getElementById("decimal");
+const pow = document.getElementById("pow");
+const root = document.getElementById("root");
 
 
 let a = "";
@@ -49,6 +52,10 @@ minus.onclick = () => app("-");
 multi.onclick = () => app("*");
 division.onclick = () => app("/");
 modules.onclick = () => app("%");
+decimal.onclick = () => app(".");
+pow.onclick = () => app("^");
+root.onclick = () => app("√");
+
 del.onclick = backspace;
 
 ans.onclick = () => equal() ;
@@ -77,6 +84,12 @@ function equal(){
     else if(a.includes("%")){
         o = "%" ;
     }
+    else if(a.includes("^")){
+        o = "^" ;
+    }
+    else if(a.includes("√")){
+        o = "√" ;
+    }
     else{
         return;
     }
@@ -101,6 +114,12 @@ function equal(){
     }
     else if(o==="%"){
         r=num1%num2;
+    }
+    else if(o==="^"){
+        r=Math.pow(num1,num2);
+    }
+    else if(o==="√"){
+        r=Math.sqrt(num2);
     }
     a=String(r);
     calculate();
