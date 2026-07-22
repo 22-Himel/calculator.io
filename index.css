@@ -1,0 +1,67 @@
+button{
+    background: #e0e0e0;
+    color: #333333;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Circle buttons */
+    cursor: pointer;
+  
+    box-shadow: 6px 6px 12px #bebebe, 
+             -6px -6px 12px #ffffff;
+    transition: all 0.1s ease;
+    box-shadow: inset 4px 4px 8px #bebebe, 
+              inset -4px -4px 8px #ffffff;
+
+    
+}
+
+body{
+    background-color: #e0e0e0;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 12px 12px 24px #bebebe, 
+               -12px -12px 24px #ffffff; /* Matching neumorphic body frame */
+    width: 320px;
+}
+
+#plus{
+    background-color: rgb(212, 26, 88);
+    color: black;
+}
+#minus{
+    background-color: rgb(212, 26, 88);
+    color: black;
+}
+#division{
+    background-color: rgb(212, 26, 88);
+    color: black;
+}
+#multi{
+    background-color: rgb(212, 26, 88);
+    color: black;
+}
+#modules{
+    background-color: rgb(212, 26, 88);
+    color: black;
+}
+#ans{
+    background-color: rgb(28, 199, 105);
+    color: black;
+}
+#del{
+    background-color: black;
+    color: red;
+}
+#clear{
+    background-color: aquamarine;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal columns */
+  gap: 10px;                             /* Equal spacing between buttons */
+  justify-items: center;
+  align-items: center;
+}
