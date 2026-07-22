@@ -67,5 +67,9 @@ body{
 }
 #div{
     height: 60px;
-    font-size :40px;
+    font-size : 40px;
+    overflow:hidden;
+    overflow-x: auto;
+    text-align: right; 
+    
 }
